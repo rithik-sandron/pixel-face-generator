@@ -12,10 +12,10 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Random;
 
 public class PixelCharacter {
-    private static final int WIDTH = 500;
-    private static final int HEIGHT = 500;
+    private static final int WIDTH = 420;
+    private static final int HEIGHT = 420;
     static final int FRAME_WIDTH = 15;
-    static final int FRAME_HEIGHT = 16;
+    static final int FRAME_HEIGHT = 13;
 
     public static BufferedImage generateImage(String text) {
         byte[] hash = text.getBytes();
@@ -25,14 +25,14 @@ public class PixelCharacter {
         // skin layer 1
         int skinColor = new Random().nextInt(5);
         for (int x = 3; x < FRAME_WIDTH - 3; x++)
-            for (int y = 3; y < FRAME_HEIGHT - 3; y++)
+            for (int y = 3; y < FRAME_HEIGHT; y++)
                 raster.setPixel(x, y, SkinColors.pickSkinColor(skinColor));
 
         // hair layer 4
-        HairTypes.pickHair(raster, new Random().nextInt(7));
+        HairTypes.pickHair(raster, new Random().nextInt(10));
 
         // eyes layer 2
-        EyeTypes.pickEye(raster, new Random().nextInt(11));
+        EyeTypes.pickEye(raster, new Random().nextInt(12));
 
         // nose layer 3
         //for(int x = 0; x < FRAME_WIDTH; x++) for(int y = 0; y < FRAME_HEIGHT; y++) if(y==8 && x == 7) raster.setPixel(x, y, NOSE);
@@ -52,8 +52,9 @@ public class PixelCharacter {
     }
 
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
-        String[] bit = {"dfhgdh", "jfghjfghj", "yrjrtjryh", "hgjfghj", "dgsdfg", "dfgdfgdfg", "fgdfgdg", "sdgdfgdfhdhd", "dfgfdgdfghthrd", "rdsgdfgfjkhj", "sdkgfkujdbgkl", "dfkjghjkf", "dkjfghkjdfhg", "dkjfghkjfblkdf"};
-        for (String s : bit) saveImages(generateImage(sha512(s)), s);
+        int i = 0;
+        while(i++ < 1000)
+          saveImages(generateImage(sha512("sample")), "sample");
     }
 
     public static String sha512(String message) throws NoSuchAlgorithmException {
@@ -67,6 +68,6 @@ public class PixelCharacter {
     }
 
     public static void saveImages(BufferedImage bufferedImage, String name) throws IOException {
-        ImageIO.write(bufferedImage, "png", new File(name + "_light" + ".png"));
+        ImageIO.write(bufferedImage, "png", new File(new Random().nextInt(1000) + ".png"));
     }
 }

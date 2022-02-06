@@ -78,8 +78,8 @@ public class EyeTypes {
             case 8:
                 for (int x = 0; x < PixelCharacter.FRAME_WIDTH; x++) {
                     for (int y = 0; y < PixelCharacter.FRAME_HEIGHT; y++) {
-                        if ((y == 7 || y == 5) && ((x == 4) || (x == 10))) raster.setPixel(x, y, eyeColor);
-                        if ((y == 6 || y == 7) && ((x == 5) || (x == 9))) raster.setPixel(x, y, eyeColor);
+                        if ((y == 7 || y == 5) && ((x == 5) || (x == 9))) raster.setPixel(x, y, eyeColor);
+                        if ((y == 6 || y == 7) && ((x == 6) || (x == 8))) raster.setPixel(x, y, eyeColor);
                     }
                 }
                 break;
@@ -100,6 +100,15 @@ public class EyeTypes {
                         if (y == 5 && ((x == 5) || (x == 9))) raster.setPixel(x, y, eyeColor);
                         if (y == 6 && (x == 4 || x == 10)) raster.setPixel(x, y, eyeColor);
                         if (y == 7 && ((x == 6) || (x == 8))) raster.setPixel(x, y, eyeColor);
+                    }
+                }
+                break;
+
+            case 11:
+                for (int x = 0; x < PixelCharacter.FRAME_WIDTH; x++) {
+                    for (int y = 0; y < PixelCharacter.FRAME_HEIGHT; y++) {
+                        if ((y == 7 || y == 5) && ((x == 5) || (x == 9))) raster.setPixel(x, y, eyeColor);
+                        if ((y == 6 || y == 7) && ((x == 4) || (x == 8))) raster.setPixel(x, y, eyeColor);
                     }
                 }
                 break;
