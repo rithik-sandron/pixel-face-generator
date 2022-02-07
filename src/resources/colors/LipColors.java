@@ -1,6 +1,6 @@
-package main;
+package resources.colors;
 
-public class LipColors {
+public final class LipColors {
     final static int[] PINK = new int[]{255, 102, 153, 200};
     final static int[] BROWN1 = new int[]{255, 166, 77, 200};
     final static int[] BROWN2 = new int[]{153, 102, 51, 200};
@@ -8,7 +8,7 @@ public class LipColors {
     final static int[] PURPLE = new int[]{204, 153, 255, 200};
     final static int[] TEETH = new int[]{255, 255, 255, 200};
 
-    static int[] pickLipColor(int type) {
+    public final static int[] pickLipColor(int type) {
         switch (type) {
             case 0:
                 return LipColors.PINK;

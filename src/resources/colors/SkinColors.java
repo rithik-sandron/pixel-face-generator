@@ -1,6 +1,6 @@
-package main;
+package resources.colors;
 
-public class SkinColors {
+public final class SkinColors {
 
     final static int[] SKIN1 = new int[]{245, 187, 149, 230};
     final static int[] SKIN2 = new int[]{250, 187, 134, 230};
@@ -8,7 +8,7 @@ public class SkinColors {
     final static int[] SKIN4 = new int[]{205, 110, 66, 230};
     final static int[] SKIN5 = new int[]{20, 13, 6, 230};
 
-    static int[] pickSkinColor(int type) {
+    public final static int[] pickSkinColor(int type) {
         switch (type) {
             case 0:
                 return SkinColors.SKIN5;

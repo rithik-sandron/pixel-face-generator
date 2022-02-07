@@ -1,6 +1,6 @@
-package main;
+package resources.colors;
 
-public class HairColors {
+public final class HairColors {
 
     final static int[] PINK = new int[]{255, 102, 153, 160};
     final static int[] BROWN = new int[]{230, 138, 0, 160};
@@ -8,7 +8,7 @@ public class HairColors {
     final static int[] RED = new int[]{255, 77, 77, 160};
     final static int[] GREEN = new int[]{0, 204, 0, 160};
 
-    static int[] pickHairColor(int type) {
+    public final static int[] pickHairColor(int type) {
         switch (type) {
             case 0:
                 return HairColors.PINK;
