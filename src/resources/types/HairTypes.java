@@ -1,10 +1,7 @@
 package resources.types;
 
-import resources.colors.HairColors;
-
 import java.awt.image.WritableRaster;
 import java.util.Arrays;
-import java.util.Random;
 
 public final class HairTypes {
 

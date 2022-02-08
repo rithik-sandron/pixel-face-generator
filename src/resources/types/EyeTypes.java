@@ -1,9 +1,6 @@
 package resources.types;
 
-import resources.colors.EyeColors;
-
 import java.awt.image.WritableRaster;
-import java.util.Random;
 
 public final class EyeTypes {
     public final static void pickEye(WritableRaster raster, int type) {

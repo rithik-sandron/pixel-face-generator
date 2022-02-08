@@ -1,16 +1,14 @@
 package resources.types;
 
-import resources.types.Config;
-
 import java.awt.geom.AffineTransform;
 import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
-public class Image {
+public final class Image {
 
+    public static Random rand = null;
     public final static int[] getRandomColor() {
-        Random rand = new Random();
         int r = rand.nextInt(256);
         int g = rand.nextInt(256);
         int b = rand.nextInt(256);
@@ -18,7 +16,6 @@ public class Image {
     }
 
     public final static int[] getRandomBGColor() {
-        Random rand = new Random();
         int r = rand.nextInt(256);
         int g = rand.nextInt(256);
         int b = rand.nextInt(256);

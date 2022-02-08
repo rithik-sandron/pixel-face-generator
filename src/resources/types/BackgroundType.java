@@ -1,9 +1,6 @@
 package resources.types;
 
-import resources.types.Config;
-
 import java.awt.image.WritableRaster;
-import java.util.Random;
 
 public final class BackgroundType {
 

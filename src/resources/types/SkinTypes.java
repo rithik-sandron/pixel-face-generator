@@ -3,13 +3,12 @@ package resources.types;
 import resources.colors.SkinColors;
 
 import java.awt.image.WritableRaster;
-import java.util.Random;
 
 public final class SkinTypes {
 
     public final static void pickSkin(WritableRaster raster) {
 
-      int[] skinColor = SkinColors.pickSkinColor(new Random().nextInt(5));
+      int[] skinColor = SkinColors.pickSkinColor(Image.rand.nextInt(5));
 //        int[] skinColor = Image.getRandomColor();
 
         for (int x = 3; x < Config.FRAME_WIDTH - 3; x++)
