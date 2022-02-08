@@ -9,14 +9,17 @@ import java.io.File;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
+import java.util.UUID;
 
 public class PixelCharacter {
 
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
-        int i = 0;
-        while(i++ < 100)
-            saveImages(generateImage(sha512("sample")), "sample_"+i);
+        int i = 1;
+        while(i < 1201)
+            saveImages(generateImage(sha512("sample_"+i)), "image_"+i++);
     }
 
     public static void saveImages(BufferedImage bufferedImage, String name) throws IOException {
@@ -24,7 +27,8 @@ public class PixelCharacter {
     }
 
     public static BufferedImage generateImage(String text) {
-//        byte[] hash = text.getBytes();
+        byte[] hash = text.getBytes();
+
         BufferedImage image = Image.createBufferedImage();
         WritableRaster raster = image.getRaster();
 
@@ -35,7 +39,7 @@ public class PixelCharacter {
         // hair layer 4
         HairTypes.pickHair(raster, new Random().nextInt(21));
         // eyes layer 2
-        EyeTypes.pickEye(raster, new Random().nextInt(12));
+        EyeTypes.pickEye(raster, new Random().nextInt(30));
         // nose layer 3
         //for(int x = 0; x < FRAME_WIDTH; x++) for(int y = 0; y < FRAME_HEIGHT; y++) if(y==8 && x == 7) raster.setPixel(x, y, NOSE);
         // lip layer 4
