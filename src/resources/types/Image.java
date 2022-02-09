@@ -6,19 +6,18 @@ import java.awt.image.BufferedImage;
 import java.util.Random;
 
 public final class Image {
-
-    public static Random rand = null;
+    public static Random random = null;
     public final static int[] getRandomColor() {
-        int r = rand.nextInt(256);
-        int g = rand.nextInt(256);
-        int b = rand.nextInt(256);
+        int r = random.nextInt(256);
+        int g = random.nextInt(256);
+        int b = random.nextInt(256);
         return new int[]{r, g, b, 240};
     }
 
     public final static int[] getRandomBGColor() {
-        int r = rand.nextInt(256);
-        int g = rand.nextInt(256);
-        int b = rand.nextInt(256);
+        int r = random.nextInt(256);
+        int g = random.nextInt(256);
+        int b = random.nextInt(256);
         return new int[]{r, g, b, 120};
     }
 

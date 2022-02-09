@@ -3,7 +3,7 @@ package resources.types;
 import java.awt.image.WritableRaster;
 import java.util.Arrays;
 
-public final class HairTypes {
+public final class FemaleAndUnisexHairs {
 
     public final static void pickHair(WritableRaster raster, int type) {
 
@@ -16,8 +16,8 @@ public final class HairTypes {
         hairColorSide[3] = 10;
 
         switch (type) {
-            case 1:
-                // type 1
+// U
+            case 0:
                 for (int x = 0; x < Config.FRAME_WIDTH; x++) {
                     for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
                         if (y == 3 && (x > 2 && x < 9)) raster.setPixel(x, y, hairColor);
@@ -28,33 +28,9 @@ public final class HairTypes {
                 }
                 break;
 
-            case 2:
-                // type 2
-                for (int x = 0; x < Config.FRAME_WIDTH; x++) {
-                    for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
-                        if (y == 3 && (x > 2 && x < 12)) raster.setPixel(x, y, hairColor);
-                        if (y == 2 && (x > 3 && x < 11)) raster.setPixel(x, y, hairColor);
-                        if (y == 1 && (x > 4 && x < 10)) raster.setPixel(x, y, hairColor);
-                        if (y == 0 && (x == 7)) raster.setPixel(x, y, hairColor);
-                    }
-                }
-                break;
 
-            case 3:
-                // type 2
-                for (int x = 0; x < Config.FRAME_WIDTH; x++) {
-                    for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
-                        if (y == 0 && (x > 2 && x < 12)) raster.setPixel(x, y, hairColor);
-                        if (y == 1 && (x > 2 && x < 12)) raster.setPixel(x, y, hairColor);
-                        if (y == 2 && (x > 2 && x < 12)) raster.setPixel(x, y, hairColor);
-                        if (y == 3 && (x > 3 && x < 11)) raster.setPixel(x, y, hairColor);
-                        if (y == 4 && (x < 6 && x > 8)) raster.setPixel(x, y, hairColor);
-                    }
-                }
-                break;
-
-            case 4:
-                // type 2
+// F
+            case 1:
                 for (int x = 0; x < Config.FRAME_WIDTH; x++) {
                     for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
                         if ((y == 4 || y == 5) && (x == 2 || x == 12)) raster.setPixel(x, y, hairColor);
@@ -67,20 +43,8 @@ public final class HairTypes {
                 }
                 break;
 
-            case 5:
-                // type 2
-                for (int x = 0; x < Config.FRAME_WIDTH; x++) {
-                    for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
-                        if ((y == 4 || y == 5) && (x == 2 || x == 12)) raster.setPixel(x, y, hairColor);
-                        if (y == 0 && (x > 3 && x < 11)) raster.setPixel(x, y, hairColor);
-                        if (y == 1 && (x > 2 && x < 12)) raster.setPixel(x, y, hairColor);
-                        if (y == 2 && (x > 2 && x < 12)) raster.setPixel(x, y, hairColor);
-                        if (y == 3 && (x == 2 || x == 3 || x == 11 || x == 12)) raster.setPixel(x, y, hairColor);
-                    }
-                }
-                break;
-
-            case 6:
+// F
+            case 2:
                 // type 2
                 for (int x = 0; x < Config.FRAME_WIDTH; x++) {
                     for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
@@ -97,8 +61,8 @@ public final class HairTypes {
                     }
                 }
                 break;
-
-            case 7:
+// F
+            case 3:
                 // type 2
                 for (int x = 0; x < Config.FRAME_WIDTH; x++) {
                     for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
@@ -117,8 +81,8 @@ public final class HairTypes {
                     }
                 }
                 break;
-
-            case 8:
+// U
+            case 4:
                 // type 2
                 for (int x = 0; x < Config.FRAME_WIDTH; x++) {
                     for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
@@ -136,8 +100,8 @@ public final class HairTypes {
                     }
                 }
                 break;
-
-            case 0:
+// F
+            case 5:
                 // type 2
                 for (int x = 0; x < Config.FRAME_WIDTH; x++) {
                     for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
@@ -157,42 +121,9 @@ public final class HairTypes {
                 }
                 break;
 
-            case 9:
-                // type 1
-                for (int x = 0; x < Config.FRAME_WIDTH; x++) {
-                    for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
-                        if ((y == 4 || y == 5) && x == 2) raster.setPixel(x, y, hairColor);
-                        if (y == 3 && (x > 1 && x < 11)) raster.setPixel(x, y, hairColor);
-                        if (y == 2 && (x > 1 && x < 12)) raster.setPixel(x, y, hairColor);
-                        if (y == 1 && (x > 5 && x < 12)) raster.setPixel(x, y, hairColor);
-                        if (y == 0 && (x > 9 && x < 13)) raster.setPixel(x, y, hairColor);
-                    }
-                }
-                break;
 
-            case 10:
-                // type 1
-                for (int x = 0; x < Config.FRAME_WIDTH; x++) {
-                    for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
-                        if (y == 3 && (x > 2 && x < 12)) raster.setPixel(x, y, hairColor);
-                        if (y == 2 && (x > 2 && x < 12)) raster.setPixel(x, y, hairColor);
-                        if (y == 1 && (x > 0 && x < 12 && x % 2 == 0)) raster.setPixel(x, y, hairColor);
-                        if (y == 0 && (x > 0 && x < 11 && x % 2 == 1)) raster.setPixel(x, y, hairColor);
-                    }
-                }
-                break;
-
-            case 11:
-                // type 1
-                for (int x = 0; x < Config.FRAME_WIDTH; x++) {
-                    for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
-                        if ((y == 1 || y == 2 || y == 3) && (x > 2 && x < 12)) raster.setPixel(x, y, hairColor);
-                        if (y == 0 && (x > 2 && x < 12 && x % 2 == 1)) raster.setPixel(x, y, hairColor);
-                    }
-                }
-                break;
-
-            case 12:
+// U
+            case 6:
                 // type 1
                 for (int x = 0; x < Config.FRAME_WIDTH; x++) {
                     for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
@@ -203,8 +134,8 @@ public final class HairTypes {
                     }
                 }
                 break;
-
-            case 13:
+// U
+            case 7:
                 // type 1
                 for (int x = 0; x < Config.FRAME_WIDTH; x++) {
                     for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
@@ -216,8 +147,8 @@ public final class HairTypes {
                     }
                 }
                 break;
-
-            case 14:
+// U
+            case 8:
                 // type 1
                 for (int x = 0; x < Config.FRAME_WIDTH; x++) {
                     for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
@@ -228,8 +159,8 @@ public final class HairTypes {
                     }
                 }
                 break;
-
-            case 15:
+// F
+            case 9:
                 // type 1
                 for (int x = 0; x < Config.FRAME_WIDTH; x++) {
                     for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
@@ -240,8 +171,8 @@ public final class HairTypes {
                     }
                 }
                 break;
-
-            case 16:
+// F
+            case 10:
                 // type 1
                 for (int x = 0; x < Config.FRAME_WIDTH; x++) {
                     for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
@@ -251,8 +182,8 @@ public final class HairTypes {
                     }
                 }
                 break;
-
-            case 17:
+// F
+            case 11:
                 // type 1
                 for (int x = 0; x < Config.FRAME_WIDTH; x++) {
                     for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
@@ -262,8 +193,8 @@ public final class HairTypes {
                     }
                 }
                 break;
-
-            case 18:
+// F
+            case 12:
                 // type 1
                 for (int x = 0; x < Config.FRAME_WIDTH; x++) {
                     for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
@@ -273,8 +204,8 @@ public final class HairTypes {
                     }
                 }
                 break;
-
-            case 19:
+// F
+            case 13:
                 // type 1
                 for (int x = 0; x < Config.FRAME_WIDTH; x++) {
                     for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
@@ -286,19 +217,6 @@ public final class HairTypes {
                 }
                 break;
 
-            case 20:
-                // type 1
-                for (int x = 0; x < Config.FRAME_WIDTH; x++) {
-                    for (int y = 0; y < Config.FRAME_HEIGHT; y++) {
-                        if ((y == 1) && (x > 1 && x < 13)) raster.setPixel(x, y, hairColor);
-                        if ((y == 0) && (x == 6 || x == 5 || x == 4 || x == 3 || x == 8 || x == 9 || x == 10 || x == 11))
-                            raster.setPixel(x, y, hairColor);
-                        if ((y == 3 || y == 4) && (x == 2 || x == 12)) raster.setPixel(x, y, hairColor);
-                        if ((y == 4) && (x == 3 || x == 11)) raster.setPixel(x, y, hairColor);
-                        if (y == 2 && (x > 1 && x < 13)) raster.setPixel(x, y, hairColor);
-                    }
-                }
-                break;
         }
     }
 }

@@ -8,7 +8,7 @@ public final class SkinTypes {
 
     public final static void pickSkin(WritableRaster raster) {
 
-      int[] skinColor = SkinColors.pickSkinColor(Image.rand.nextInt(5));
+      int[] skinColor = SkinColors.pickSkinColor(Image.random.nextInt(5));
 //        int[] skinColor = Image.getRandomColor();
 
         for (int x = 3; x < Config.FRAME_WIDTH - 3; x++)

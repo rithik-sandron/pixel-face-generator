@@ -9,18 +9,21 @@ import java.io.File;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Random;
-import java.util.UUID;
+import java.util.*;
 
 public class PixelCharacter {
 
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
         int i = 1;
         // create 1200 images of size 850 X 850
-        while(i < 1201) {
-            String s = UUID.randomUUID().toString();
-            String sha512 = sha512(s);
-            saveImages(generateImage(sha512), "image_" + i++);
+        while(i< 1201) {
+            String name = "image_" + i++;
+            List<Character> l = new ArrayList<>();
+            l.add('M');
+            l.add('F');
+            Collections.shuffle(l);
+            String sha512 = sha512(name);
+            saveImages(generateImage(sha512, l.get(0)), name);
         }
     }
 
@@ -28,30 +31,29 @@ public class PixelCharacter {
         ImageIO.write(bufferedImage, "png", new File(name + ".png"));
     }
 
-    public static BufferedImage generateImage(String text) {
+    public static BufferedImage generateImage(String text, char gender) {
         byte[] hash = text.getBytes();
 
         StringBuilder bi = new StringBuilder();
         for(byte b : hash) bi.append(b);
 
         Random random = new Random();
-        long seed = Long.valueOf(bi.toString().substring(9, 25));
+        long seed = Long.valueOf(bi.toString().substring(9, 26)) + gender;
         random.setSeed(seed);
-        Image.rand = random;
+        Image.random = random;
 
         BufferedImage image = Image.createBufferedImage();
         WritableRaster raster = image.getRaster();
-        // background
+        // background 1
         BackgroundType.pickBackground(raster);
-        // skin layer 1
+        // skin layer 2
         SkinTypes.pickSkin(raster);
-        // hair layer 4
-        HairTypes.pickHair(raster, random.nextInt(21));
-        // eyes layer 2
+        // hair layer 3
+        if('M' == gender) MaleAndUniSexHairs.pickHair(raster, random.nextInt(12));
+        else if('F' == gender) FemaleAndUnisexHairs.pickHair(raster, random.nextInt(14));
+        // eyes layer 4
         EyeTypes.pickEye(raster, random.nextInt(30));
-        // nose layer 3
-        //for(int x = 0; x < FRAME_WIDTH; x++) for(int y = 0; y < FRAME_HEIGHT; y++) if(y==8 && x == 7) raster.setPixel(x, y, NOSE);
-        // lip layer 4
+        // lip layer 5
         LipTypes.pickLip(raster, random.nextInt(11));
 
         BufferedImage finalImage = Image.createFinalBufferedImage();
