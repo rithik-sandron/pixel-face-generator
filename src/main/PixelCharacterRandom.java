@@ -4,6 +4,7 @@ import resources.types.*;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.awt.image.Raster;
 import java.awt.image.WritableRaster;
 import java.io.File;
 import java.io.IOException;
@@ -19,8 +20,8 @@ public class PixelCharacterRandom {
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
         int i = 1;
         // create 1200 images of size 850 X 850
-        while(i< 1201) {
-            String name = "image_" + i;
+        while(i < 1200) {
+            String name = "image_" + i++;
             saveImages(generateImage(), name);
         }
     }

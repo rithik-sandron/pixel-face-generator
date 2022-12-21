@@ -10,7 +10,6 @@ public final class SkinTypes {
 
       int[] skinColor = SkinColors.pickSkinColor(Image.random.nextInt(5));
 //        int[] skinColor = Image.getRandomColor();
-
         for (int x = 3; x < Config.FRAME_WIDTH - 3; x++)
             for (int y = 3; y < Config.FRAME_HEIGHT; y++) {
                 if(y == Config.FRAME_HEIGHT-2 && (x == 3 || x == Config.FRAME_WIDTH-4));
