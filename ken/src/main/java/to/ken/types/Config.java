@@ -1,4 +1,4 @@
-package resources.types;
+package to.ken.types;
 
 public class Config {
 

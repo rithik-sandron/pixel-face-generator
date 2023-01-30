@@ -1,6 +1,6 @@
-package resources.types;
+package to.ken.types;
 
-import resources.colors.SkinColors;
+import to.ken.colors.SkinColors;
 
 import java.awt.image.WritableRaster;
 

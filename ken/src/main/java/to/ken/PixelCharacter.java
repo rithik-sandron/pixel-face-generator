@@ -1,6 +1,6 @@
-package main;
+package to.ken;
 
-import resources.types.*;
+import to.ken.types.*;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

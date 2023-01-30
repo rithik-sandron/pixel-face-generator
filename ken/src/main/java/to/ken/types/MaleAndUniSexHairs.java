@@ -1,4 +1,4 @@
-package resources.types;
+package to.ken.types;
 
 import java.awt.image.WritableRaster;
 import java.util.Arrays;

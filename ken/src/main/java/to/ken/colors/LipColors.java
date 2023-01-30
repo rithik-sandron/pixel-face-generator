@@ -1,4 +1,4 @@
-package resources.colors;
+package to.ken.colors;
 
 public final class LipColors {
     final static int[] PINK = new int[]{255, 102, 153, 200};

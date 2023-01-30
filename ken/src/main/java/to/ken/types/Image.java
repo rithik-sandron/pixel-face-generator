@@ -1,4 +1,4 @@
-package resources.types;
+package to.ken.types;
 
 import java.awt.geom.AffineTransform;
 import java.awt.image.AffineTransformOp;

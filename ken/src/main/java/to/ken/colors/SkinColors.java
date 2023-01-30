@@ -1,4 +1,4 @@
-package resources.colors;
+package to.ken.colors;
 
 public final class SkinColors {
 

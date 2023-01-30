@@ -1,4 +1,4 @@
-package main;
+package to.ken;
 
 import javax.imageio.ImageIO;
 import java.awt.geom.AffineTransform;
