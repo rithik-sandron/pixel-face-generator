@@ -3,6 +3,5 @@ src/.DS_Store
 *.iml
 .DS_Store
 *.xml
-*.png
 *.idea/
 *.class
